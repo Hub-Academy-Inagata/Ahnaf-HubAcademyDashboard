@@ -1,6 +1,6 @@
 @extends('master')
 @section('content')
-    <section class="login-page page-bg">
+    <section class="login-page">
         <div class="container">
             <div class="login-modal position-relative " data-aos="fade-up" data-aos-duration="1000">
                 <div class="w-100">

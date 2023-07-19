@@ -1,26 +1,26 @@
 @extends('master')
 @section('content')
-    <section class="overview-page page-bg page-section" data-aos="fade-left" aos-data-duration="1000">
+    <section class="overview-page page-section">
         @include('components.sidebar')
         <div class="page-content">
-            <div class="header">
+            <div class="header pb-lg-4 pb-2 ">
                 <p class="">Hi Admin,</p>
                 <h3 class="">Welcome to Inagata Hub</h3>
             </div>
             <div class="chart-wrapper">
-                <div class="pb-4">
+                <div class="pb-lg-4 pb-md-2">
                     <p>Visitor on December</p>
                 </div>
                 <div class="row align-items-start">
-                    <div class="page-views col-2">
+                    <div class="page-views col-lg-2 d-md-none d-none gap-4 gap-md-0 d-lg-block">
                         <h1>17</h1>
-                        <div class="d-flex align-items-center py-3 border-bottom">
+                        <div class="d-flex align-items-center py-3 border-0 border-bottom">
                             <div class="heart-icon">
                                 <img src="assets/icons/Heart.png" alt="">
                             </div>
                             <p>Page views per day</p>
                         </div>
-                        <div class="d-flex gap-2 align-items-center py-3">
+                        <div class="d-none d-lg-flex gap-2 align-items-center py-3">
                             <img src="assets/icons/line-graph.svg" alt="">
                             {{-- <canvas id="curveLineChart"></canvas> --}}
                             <div class="d-flex">
@@ -31,9 +31,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-10">
+                    <div class="col-12 col-lg-10">
                         {{-- Chart Box --}}
-                        <div class="chart-box">
+                        <div class="chart-box ">
                             <div class="w-100 d-flex justify-content-end align-items-center">
                                 <div class="">
                                     <div class="select-box">
@@ -82,15 +82,14 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="content-wrapper">
                 <div class="">
                     <p class="mb-0">Your intern member now</p>
                 </div>
-                <div class="row career-items align-items-start">
-                    <div class="col-6">
-                        <div class="career-item d-flex ">
+                <div class="row w-100 career-items align-items-start">
+                    <div class="col-lg-6">
+                        <div class="career-item d-block d-sm-flex ">
                             <div class="career-title d-flex align-items-center">
                                 <div class="career-icon">
                                     <img src="assets/icons/iic_karir__backend.png" alt="">
@@ -104,7 +103,7 @@
                                 <p class="">3 Orang</p>
                             </div>
                         </div>
-                        <div class="career-item d-flex ">
+                        <div class="career-item d-block d-sm-flex">
                             <div class="career-title d-flex align-items-center">
                                 <div class="career-icon">
                                     <img src="assets/icons/ic_karir__frontend.png" alt="">
@@ -118,7 +117,7 @@
                                 <p class="">3 Orang</p>
                             </div>
                         </div>
-                        <div class="career-item d-flex ">
+                        <div class="career-item d-block d-sm-flex">
                             <div class="career-title d-flex align-items-center">
                                 <div class="career-icon">
                                     <img src="assets/icons/ic_karir__mobile.png" alt="">
@@ -132,7 +131,7 @@
                                 <p class="">3 Orang</p>
                             </div>
                         </div>
-                        <div class="career-item d-flex ">
+                        <div class="career-item d-block d-sm-flex">
                             <div class="career-title d-flex align-items-center">
                                 <div class="career-icon">
                                     <img src="assets/icons/ic_karir__ui.png" alt="">
@@ -147,8 +146,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="career-item d-flex ">
+                    <div class="col-lg-6">
+                        <div class="career-item d-block d-sm-flex">
                             <div class="career-title d-flex align-items-center">
                                 <div class="career-icon">
                                     <img src="assets/icons/ic_karir_analyze.png" alt="">
@@ -162,7 +161,7 @@
                                 <p class="">3 Orang</p>
                             </div>
                         </div>
-                        <div class="career-item d-flex ">
+                        <div class="career-item d-block d-sm-flex">
                             <div class="career-title d-flex align-items-center">
                                 <div class="career-icon">
                                     <img src="assets/icons/ic_karir_management.png" alt="">
@@ -176,7 +175,7 @@
                                 <p class="">3 Orang</p>
                             </div>
                         </div>
-                        <div class="career-item d-flex ">
+                        <div class="career-item d-block d-sm-flex">
                             <div class="career-title d-flex align-items-center">
                                 <div class="career-icon">
                                     <img src="assets/icons/ic_karir_media.png" alt="">
@@ -190,7 +189,7 @@
                                 <p class="">3 Orang</p>
                             </div>
                         </div>
-                        <div class="career-item d-flex ">
+                        <div class="career-item d-block d-sm-flex">
                             <div class="career-title d-flex align-items-center">
                                 <div class="career-icon">
                                     <img src="assets/icons/ic_karir_illustration.png" alt="">
@@ -231,6 +230,7 @@
                 }]
             },
             options: {
+                maintainAspectRatio: false,
                 responsive: true,
                 plugins: {
                     legend: {
@@ -261,42 +261,6 @@
                     },
                 }
             }
-        });
-    </script>
-    <script>
-        // Data untuk grafik garis
-        const data = {
-            labels: [], // Kosongkan label
-            datasets: [{
-                data: [12, 19, 3, 5, 2, 3], // Data titik pada grafik garis
-                borderColor: 'rgb(75, 192, 192)', // Warna garis
-                tension: 0.4, // Tegangan kurva garis (0.4 untuk kurva yang lebih halus)
-                fill: false // Tanpa pengisian di bawah garis
-            }]
-        };
-
-        // Opsi konfigurasi grafik
-        const options = {
-            scales: {
-                x: {
-                    display: false // Sembunyikan skala x
-                },
-                y: {
-                    display: false // Sembunyikan skala y
-                }
-            },
-            elements: {
-                line: {
-                    stepped: false // Tidak menggunakan garis bertingkat
-                }
-            }
-        };
-
-        // Membuat grafik garis
-        const curveLineChart = new Chart(document.getElementById('curveLineChart'), {
-            type: 'line',
-            data: data,
-            options: options
         });
     </script>
 @endsection

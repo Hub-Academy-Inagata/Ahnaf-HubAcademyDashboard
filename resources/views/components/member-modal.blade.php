@@ -4,13 +4,13 @@
         <div class="modal-content">
             <div class="modal-header w-100">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Add Member</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <button type="button" class="btn-closes" data-bs-dismiss="modal" aria-label="Close">
                     <i>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M6.53033 5.46967C6.23744 5.17678 5.76256 5.17678 5.46967 5.46967C5.17678 5.76256 5.17678 6.23744 5.46967 6.53033L10.9393 12L5.46967 17.4697C5.17678 17.7626 5.17678 18.2374 5.46967 18.5303C5.76256 18.8232 6.23744 18.8232 6.53033 18.5303L12 13.0607L17.4697 18.5303C17.7626 18.8232 18.2374 18.8232 18.5303 18.5303C18.8232 18.2374 18.8232 17.7626 18.5303 17.4697L13.0607 12L18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967C18.2374 5.17678 17.7626 5.17678 17.4697 5.46967L12 10.9393L6.53033 5.46967Z"
-                                fill="#32393A" />
+                                fill="currentColor" />
                         </svg>
                     </i>
                 </button>
@@ -29,9 +29,9 @@
                             <input type="button" class="upload-avatar primary-button" value="Upload Avatar"
                                 onclick="document.getElementById('input-pic').click();" />
 
-                            <button type="button" class="delete-avatar-btn">Delete</button>
+                            <button type="button" class="delete-avatar-btn" id="delete-avatar-btn">Delete</button>
                         </div>
-                        <label class="mb-0 pt-3">Avatar help your teammates recognize you in Inagatahub</label>
+                        <label class="mb-0 pt-2 pt-md-3">Avatar help your teammates recognize you in Inagatahub</label>
                     </div>
                 </div>
                 <form action="" class="add-form pt-4">
@@ -41,13 +41,13 @@
                             <input type="text" class="" placeholder="">
                         </div>
                     </div>
-                    <div class="d-flex w-100 pt-3 align-items-center justify-content-between gap-4">
+                    <div class="d-block d-md-flex w-100 pt-3 align-items-center justify-content-between gap-4">
                         <div class="w-100">
                             <label for="">School/University</label>
                             <input type="text" class="" placeholder="">
                         </div>
-                        <div class="w-100">
-                            <label for="">Start From (Date yyyy/mm/dd)</label>
+                        <div class="w-100 pt-md-0 pt-3">
+                            <label for="">Start From (Date dd/mm/yyyy)</label>
                             <div class="date">
                                 <i class="">
                                     <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
@@ -58,11 +58,11 @@
                                     </svg>
 
                                 </i>
-                                <input type="text" class="" id="datepicker" placeholder="2021/11/10">
+                                <input type="date" class="" id="" placeholder="2021/11/10">
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex w-100 pt-3 align-items-center justify-content-between gap-4">
+                    <div class="d-block d-md-flex w-100 pt-3 align-items-center justify-content-between gap-4">
                         <div class="w-100">
                             <label for="">Intern Career</label>
                             <div class="select-box">
@@ -122,7 +122,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="w-100">
+                        <div class="w-100 pt-md-0 pt-3">
                             <label for="">Level Access</label>
                             <div class="select-box">
                                 <div class="select-box__current" tabindex="1">
@@ -163,8 +163,8 @@
                     <div class="w-100 pt-3">
                         <label for="">Email</label>
                         <div class="">
-                            <input type="text" class="warning" placeholder="Ex: Inagatahub@gmail.com">
-                            <p class="input-warning">*Your email or password invalid</p>
+                            <input type="email" class="email" placeholder="Ex: Inagatahub@gmail.com" required>
+                            <p class="input-warning email-error"></p>
                             {{-- 'warning' class is for invalid input --}}
                         </div>
                     </div>
@@ -190,13 +190,13 @@
         <div class="modal-content">
             <div class="modal-header w-100">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Member</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <button type="button" class="btn-closes" data-bs-dismiss="modal" aria-label="Close">
                     <i>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M6.53033 5.46967C6.23744 5.17678 5.76256 5.17678 5.46967 5.46967C5.17678 5.76256 5.17678 6.23744 5.46967 6.53033L10.9393 12L5.46967 17.4697C5.17678 17.7626 5.17678 18.2374 5.46967 18.5303C5.76256 18.8232 6.23744 18.8232 6.53033 18.5303L12 13.0607L17.4697 18.5303C17.7626 18.8232 18.2374 18.8232 18.5303 18.5303C18.8232 18.2374 18.8232 17.7626 18.5303 17.4697L13.0607 12L18.5303 6.53033C18.8232 6.23744 18.8232 5.76256 18.5303 5.46967C18.2374 5.17678 17.7626 5.17678 17.4697 5.46967L12 10.9393L6.53033 5.46967Z"
-                                fill="#32393A" />
+                                fill="currentColor" />
                         </svg>
                     </i>
                 </button>
@@ -204,20 +204,20 @@
             <div class="modal-body w-100">
                 <div class="member-avatar">
                     <div class="avatar">
-                        <img src="assets/img/user.png" alt="" id="profile-pic">
+                        <img src="assets/img/user.png" alt="" id="edit-profile-pic">
                     </div>
                     <div class="">
                         <div class="avatar-control">
 
                             <input type="file" style="display: none;" accept="image/jpeg, image/png, image/jpg"
-                                id="input-pic" />
+                                id="edit-pic" />
 
                             <input type="button" class="upload-avatar primary-button" value="Upload Avatar"
-                                onclick="document.getElementById('input-pic').click();" />
+                                onclick="document.getElementById('edit-pic').click();" />
 
-                            <button type="button" class="delete-avatar-btn">Delete</button>
+                            <button type="button" class="delete-avatar-btn" id="delete-pic-btn">Delete</button>
                         </div>
-                        <label class="mb-0 pt-3">Avatar help your teammates recognize you in Inagatahub</label>
+                        <label class="mb-0 pt-2 pt-md-3">Avatar help your teammates recognize you in Inagatahub</label>
                     </div>
                 </div>
                 <form action="" class="add-form pt-4">
@@ -227,13 +227,13 @@
                             <input type="text" class="" placeholder="">
                         </div>
                     </div>
-                    <div class="d-flex w-100 pt-3 align-items-center justify-content-between gap-4">
+                    <div class="d-block d-md-flex w-100 pt-3 align-items-center justify-content-between gap-4">
                         <div class="w-100">
                             <label for="">School/University</label>
                             <input type="text" class="" placeholder="">
                         </div>
-                        <div class="w-100">
-                            <label for="">Start From (Date yyyy/mm/dd)</label>
+                        <div class="w-100 pt-md-0 pt-3">
+                            <label for="">Start From (Date dd/mm/yyyy)</label>
                             <div class="date">
                                 <i class="">
                                     <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
@@ -244,11 +244,11 @@
                                     </svg>
 
                                 </i>
-                                <input type="text" class="" id="datepicker" placeholder="2021/11/10">
+                                <input type="date" class="" id="" placeholder="2021/11/10">
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex w-100 pt-3 align-items-center justify-content-between gap-4">
+                    <div class="d-block d-md-flex  w-100 pt-3 align-items-center justify-content-between gap-4">
                         <div class="w-100">
                             <label for="">Intern Career</label>
                             <div class="select-box">
@@ -260,22 +260,22 @@
                                             Career</p>
                                     </div>
                                     <div class="select-box__value"><input class="select-box__input" type="radio"
-                                            id="fed" value="2" name="career" />
+                                            id="fedev" value="2" name="career" />
                                         <p onclick="selectfocuss(this);" class="select-box__input-text">Frontend
                                             Development</p>
                                     </div>
                                     <div class="select-box__value"><input class="select-box__input" type="radio"
-                                            id="bed" value="3" name="career" />
+                                            id="bedev" value="3" name="career" />
                                         <p onclick="selectfocuss(this);" class="select-box__input-text">Backend
                                             Development</p>
                                     </div>
                                     <div class="select-box__value"><input class="select-box__input" type="radio"
-                                            id="mod" value="4" name="career" />
+                                            id="modev" value="4" name="career" />
                                         <p onclick="selectfocuss(this);" class="select-box__input-text">Mobile
                                             Development</p>
                                     </div>
                                     <div class="select-box__value"><input class="select-box__input" type="radio"
-                                            id="uid" value="5" name="career" />
+                                            id="uide" value="5" name="career" />
                                         <p onclick="selectfocuss(this);" class="select-box__input-text">UI/UX Design
                                         </p>
                                     </div>
@@ -290,25 +290,25 @@
 
                                 </div>
                                 <ul class="select-box__list">
-                                    <li><label class="select-box__option" for="fed"
+                                    <li><label class="select-box__option" for="fedev"
                                             aria-hidden="aria-hidden">Frontend
                                             Development
                                     </li>
-                                    <li><label class="select-box__option" for="bed"
+                                    <li><label class="select-box__option" for="bedev"
                                             aria-hidden="aria-hidden">Backend
                                             Development
                                     </li>
-                                    <li><label class="select-box__option" for="mod"
+                                    <li><label class="select-box__option" for="modev"
                                             aria-hidden="aria-hidden">Mobile
                                             Development
                                     </li>
-                                    <li><label class="select-box__option" for="uid"
+                                    <li><label class="select-box__option" for="uide"
                                             aria-hidden="aria-hidden">UI/UX Design
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="w-100">
+                        <div class="w-100 pt-md-0 pt-3">
                             <label for="">Level Access</label>
                             <div class="select-box">
                                 <div class="select-box__current" tabindex="1">
@@ -320,11 +320,11 @@
                                             Access</p>
                                     </div>
                                     <div class="select-box__value"><input class="select-box__input" type="radio"
-                                            id="member" value="2" name="level" />
+                                            id="lvlmember" value="2" name="level" />
                                         <p onclick="selectfocuss(this);" class="select-box__input-text">Member</p>
                                     </div>
                                     <div class="select-box__value"><input class="select-box__input" type="radio"
-                                            id="admin" value="3" name="level" />
+                                            id="lvladmin" value="3" name="level" />
                                         <p onclick="selectfocuss(this);" class="select-box__input-text">Admin</p>
                                     </div>
                                     <svg class="select-box__icon" width="26" height="26" viewBox="0 0 26 26"
@@ -336,10 +336,10 @@
 
                                 </div>
                                 <ul class="select-box__list">
-                                    <li><label class="select-box__option" for="member"
+                                    <li><label class="select-box__option" for="lvlmember"
                                             aria-hidden="aria-hidden">Member
                                     </li>
-                                    <li><label class="select-box__option" for="admin"
+                                    <li><label class="select-box__option" for="lvladmin"
                                             aria-hidden="aria-hidden">Admin
                                     </li>
                                 </ul>
@@ -349,8 +349,8 @@
                     <div class="w-100 pt-3">
                         <label for="">Email</label>
                         <div class="">
-                            <input type="text" class="warning" placeholder="Ex: Inagatahub@gmail.com">
-                            <p class="input-warning">*Your email or password invalid</p>
+                            <input type="email" class="email" id="email" required>
+                            <p class="input-warning email-error" id="email-error"></p>
                             {{-- 'warning' class is for invalid input --}}
                         </div>
                     </div>
